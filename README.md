@@ -7,7 +7,7 @@ The main files we will be using are calibration.ino and allmoves.ino. Calibratio
 # 1. Setting up the IDE 
 Once you have downloaded the [Arduino IDE](https://www.arduino.cc/en/software), open the calibration.ino file.
 
-Now go to library manager (Sketch > Include Library > Manage Libraries) and download **OttoDIYLib** by Otto DIY. Or you can click the library icon on the left of the window. To confirm that you have downloaded it, complie the sketch using the 'tick' icon on the top left of the IDE. The code should complie without any errors.
+Now go to library manager (Sketch > Include Library > Manage Libraries) and download **OttoDIYLib** by Otto DIY. Or you can click the library icon on the left of the window. To confirm that you have downloaded it, compile the sketch using the 'tick' icon on the top left of the IDE: [tick icon](initialise/Compile.png) The code should compile without any errors.
 
 # 2. Uploading to the nano
 Once you have completed step 1, connect the otto's Arduino nano to your computer and select the board. 
