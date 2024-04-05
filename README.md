@@ -2,7 +2,7 @@
 
 Whether you're encountering errors during code upload, seeking to personalize your Otto, or simply exploring the available functions, this guide has got you covered.
 
-We'll primarily focus on two crucial files: `calibration.ino` and `allmoves.ino`. The former is the backbone of your Otto's programming, containing essential setup and loop functions. The latter is a library of Otto functions..
+I will go over setting up the Arduino IDE, uploading the code and modifying your OttoBot behaviour. We'll primarily focus on two crucial files: `calibration.ino` and `allmoves.ino`. The former is the backbone of your Otto's programming, containing essential setup and loop functions. The latter is a library of Otto functions..
 
 # 1. Setting up the IDE 
 Once you have downloaded the [Arduino IDE](https://www.arduino.cc/en/software), open the calibration.ino file.
@@ -16,9 +16,9 @@ Once you have completed step 1, connect the otto's Arduino nano to your computer
 
 <img src="initialise/Port.png" width="500px" height="auto">
 
-The IDE might pickup your bluetooth ports like mine has. Usually, the names have "usbserial", "COM52" or similar in it. A trick I use is to to disconnect the Arduino, observe which ports are listed, reconnect it, and then identify which new port appears in the list. 
+The IDE might pickup your bluetooth ports like mine has. Usually, the names have "usbserial", "COM52" or similar in it. A trick I use is to disconnect the Arduino, observe which ports are listed, reconnect it, and then identify which new port appears in the list. 
 
-Once you have selected the port and Arduino Nano board, upload the code to the nano: 
+Once you have selected the port and Arduino Nano board, upload the code to the Arduino nano: 
 
 <img src="initialise/Upload.png" width="500px" height="auto">
 
@@ -75,7 +75,7 @@ Feel free to import any function you wish and integrate it into the main loop. F
         Otto.crusaito(2, 1000, 20,1);
   }
   ```
-* If you want the ottobot to indefinetly walk forward for a second, wait for a second, then walk backwards for a second, add this to the loop function
+* If you want the ottobot to indefinitely walk forward for a second, wait for a second, then walk backwards for a second, add this to the loop function
   ```
    // Walk forward
   Otto.walk(1, 1000, 1);  // Arguments are: steps, time per step, direction (1 for forward)
@@ -87,9 +87,15 @@ Feel free to import any function you wish and integrate it into the main loop. F
   Serial.println("Otto retreated, life's rough");
   ```
 
-# 6. Conclusion
+# 6. Troubleshooting
+I've listed some common issues that may aid in the debugging process:
+* Ensure the component (servo, US) is connected to the correct pin defined in the code. For example, `#define TRIG_PIN 8` means that the trig pin from your ultrasonic sensor should be connected to pin 8 in the Arduino Nano.
+* If the code uploads but the otto has slow or no movements, try replacing the wire.
+* If you are using Windows and have issues uploading the code to the nano, search for **CH340 driver download** on your browser and follow the prompts. Since we use arduino nano clones, the necessary drivers might not be installed.
+
+# 7. Conclusion
 There is a lot of information online about otto, if you want to upgrade it check out [OttoDIY](https://www.ottodiy.com/academy) for more!
 
-I hope you found this tutorial useful, please [email](akhilgovan@gmail.com) me if 
+I hope you found this tutorial useful, please reach out (_akhilgovan@gmail.com_) if you have any issues you need help with!
 
 
