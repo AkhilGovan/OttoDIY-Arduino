@@ -22,11 +22,73 @@ Once you have selected the port and Arduino Nano board, upload the code to the n
 
 <img src="initialise/Upload.png" width="500px" height="auto">
 
-##Upload Errors
-**If you have no errors, you are in luck!"**
+## Upload Errors
+**If you have no errors, you are in luck!**
 
 It's always a mission uploading code using the IDE, here's a fix to a common error that occurs:
 
-<img src="initialise/uploadError.png> 
+<img src="initialise/uploadError.png" width="auto" height="300px"> 
+
+* Run the old bootlegger. Go to Tools > Processor > Atmega328P(Old bootlegger):
+
+  <img src="initialise/oldBootleg.png" width="500px" height="auto" alt="old bootlegger">
+
+  Now try uploading again, it should work!
+
+* If the same or similar error still persists, ensure the right board and port is selected, press the reset button on the arduino or restart your IDE.
+
+# 3. Serial Monitor
+Open the serial monitor to view outputs from the otto. Go to Tools > Serial Monitor to open the monitor. 
+
+<img src="serialMonitor.png" width="500px" height="auto">
+
+Type in a letter and press enter to send a message to otto!
+
+# 4. Its ALIVE
+If you have assembled the otto correctly, the hardware is functional, the wires aren't faulty and its not your unlucky day, then your robot should move towards any object it sees within 10cm and home its legs when you send the corresponding message. 
+
+# 5. Modifying your Otto
+Calibration.ino contains some starter code with a simple object detection function. Allmoves.ino contains some functions from the OttoDIY library. The function typically follows this signature:
+```
+  Otto.function(int STEPS, int T, int D);  // Arguments are: steps, time per step (ms), direction (1 for forward)
+```
+
+Feel free to import any function you wish and integrate it into the main loop. For example,
+* If you want otto to walk backwards when it detects an object, consider changing 
+  ```
+  Otto.walk(1, 1000, -1);
+  ```
+  to
+  ```
+  Otto.walk(1, 1000, 1);
+  ```
+* If you want otto to moonwalk when it detects an object, replace the walk function with
+  ````
+  Otto.moonwalker(3, 1000, 25,-1);
+  ````
+* If you want otto to carry out a function when you send it a message (in this example we make it do the 'crusaito' when I type "shakeit" in the serial monitor)
+  ```
+   if((Serial.available()) > (0)){
+        charRead = Serial.read();
+    }
+    if((charRead)==('shakeit' )){
+        Otto.crusaito(2, 1000, 20,1);
+  }
+  ```
+* If you want the ottobot to indefinetly walk forward for a second, wait for a second, then walk backwards for a second, add this to the loop function
+  ```
+   // Walk forward
+  Otto.walk(1, 1000, 1);  // Arguments are: steps, time per step, direction (1 for forward)
+  delay(1000); // Wait for a second
+  Serial.println("Otto is going places");   //print to the serial monitor to track progress
+  // Walk backward
+  Otto.walk(1, 1000, -1);  // Arguments are: steps, time per step, direction (-1 for backward)
+  delay(1000); // Wait for a second
+  Serial.println("Otto retreated, life's rough");
+  ```
+
+# 6. Conclusion
+There is a lot of information online about otto, if you want to upgrade it check out [OttoDIY](https://www.ottodiy.com/academy) for more!
+I hope you found this tutorial useful, please reach out at 
 
 
