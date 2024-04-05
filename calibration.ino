@@ -57,7 +57,7 @@ void loop(){
     // Make Otto walk forward if an object is detected
     Otto.walk(1, 1000, -1); 
     //uncomment this line if you want it to moon walk  
-    Otto.moonwalker(3, 1000, 25,-1);  
+    //Otto.moonwalker(3, 1000, 25,-1);  
   }
 
     if((Serial.available()) > (0)){
