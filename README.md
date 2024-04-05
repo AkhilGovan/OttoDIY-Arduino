@@ -40,7 +40,7 @@ It's always a mission uploading code using the IDE, here's a fix to a common err
 # 3. Serial Monitor
 Open the serial monitor to view outputs from the otto. Go to Tools > Serial Monitor to open the monitor. 
 
-<img src="serialMonitor.png" width="auto" height="300px">
+<img src="initialise/serialMonitor.png" width="auto" height="300px">
 
 Type in a letter and press enter to send a message to otto!
 
