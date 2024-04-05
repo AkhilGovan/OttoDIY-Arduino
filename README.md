@@ -1,8 +1,8 @@
-Hi guys! Welcome to the coding section of OttoBots!
+# Welcome to the OttoBots Coding Section!
 
-This repo covers the code behind the ottobot, some possible errors that may occur when uploading code to the ottobot and how to modify the code to personalise your Otto!
+Whether you're encountering errors during code upload, seeking to personalize your Otto, or simply exploring the available functions, this guide has got you covered.
 
-The main files we will be using are calibration.ino and allmoves.ino. Calibration.ino contains the main setup and loop functions which we upload to the otto. allmoves.ino contains a plethora of otto functions that I demonstrate later.
+We'll primarily focus on two crucial files: `calibration.ino` and `allmoves.ino`. The former is the backbone of your Otto's programming, containing essential setup and loop functions. The latter is a library of Otto functions..
 
 # 1. Setting up the IDE 
 Once you have downloaded the [Arduino IDE](https://www.arduino.cc/en/software), open the calibration.ino file.
@@ -31,7 +31,7 @@ It's always a mission uploading code using the IDE, here's a fix to a common err
 
 * Run the old bootlegger. Go to Tools > Processor > Atmega328P(Old bootlegger):
 
-  <img src="initialise/oldBootleg.png" width="500px" height="auto" alt="old bootlegger">
+  <img src="initialise/oldBootleg.png" width="auto" height="300px" alt="old bootlegger">
 
   Now try uploading again, it should work!
 
@@ -40,15 +40,15 @@ It's always a mission uploading code using the IDE, here's a fix to a common err
 # 3. Serial Monitor
 Open the serial monitor to view outputs from the otto. Go to Tools > Serial Monitor to open the monitor. 
 
-<img src="serialMonitor.png" width="500px" height="auto">
+<img src="serialMonitor.png" width="auto" height="300px">
 
 Type in a letter and press enter to send a message to otto!
 
 # 4. Its ALIVE
-If you have assembled the otto correctly, the hardware is functional, the wires aren't faulty and its not your unlucky day, then your robot should move towards any object it sees within 10cm and home its legs when you send the corresponding message. 
+If you have assembled the otto correctly, the hardware is functional, the wires aren't faulty and the stars align, then your robot should move towards any object it sees within 10cm and home its legs when you send the corresponding message. 
 
 # 5. Modifying your Otto
-Calibration.ino contains some starter code with a simple object detection function. Allmoves.ino contains some functions from the OttoDIY library. The function typically follows this signature:
+`Calibration.ino` contains some starter code with a simple object detection function. `allmoves.ino` contains some functions from the OttoDIY library, copy and paste these functions into `calibration.ino`. The function typically follows this signature:
 ```
   Otto.function(int STEPS, int T, int D);  // Arguments are: steps, time per step (ms), direction (1 for forward)
 ```
@@ -89,6 +89,7 @@ Feel free to import any function you wish and integrate it into the main loop. F
 
 # 6. Conclusion
 There is a lot of information online about otto, if you want to upgrade it check out [OttoDIY](https://www.ottodiy.com/academy) for more!
-I hope you found this tutorial useful, please reach out at 
+
+I hope you found this tutorial useful, please [email](akhilgovan@gmail.com) me if 
 
 
