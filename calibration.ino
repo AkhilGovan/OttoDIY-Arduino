@@ -51,9 +51,13 @@ void setup(){
 
 void loop(){
 
+  //if the US detects something, walk forwards
   if (checkForObjects()) {
     Serial.println("see you");
-    Otto.walk(1, 1000, -1); // Make Otto walk forward if an object is detected
+    // Make Otto walk forward if an object is detected
+    Otto.walk(1, 1000, -1); 
+    //uncomment this line if you want it to moon walk  
+    Otto.moonwalker(3, 1000, 25,-1);  
   }
 
     if((Serial.available()) > (0)){
