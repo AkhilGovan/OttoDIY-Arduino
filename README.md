@@ -31,7 +31,7 @@ It's always a mission uploading code using the IDE, here's a fix to a common err
 
 * Run the old bootlegger. Go to Tools > Processor > Atmega328P(Old bootlegger):
 
-  <img src="initialise/oldBootleg.png" width="auto" height="300px" alt="old bootlegger">
+  <img src="initialise/oldBootlegger.png" width="auto" height="300px" alt="old bootlegger">
 
   Now try uploading again, it should work!
 
