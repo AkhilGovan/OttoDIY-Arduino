@@ -7,7 +7,10 @@ I will go over setting up the Arduino IDE, uploading the code and modifying your
 # 1. Setting up the IDE 
 Once you have downloaded the [Arduino IDE](https://www.arduino.cc/en/software), open the calibration.ino file.
 
-Now go to library manager (Sketch > Include Library > Manage Libraries) and download **OttoDIYLib** by Otto DIY. Or you can click the library icon on the left of the window. To confirm that you have downloaded it, compile the sketch using the 'tick' icon on the top left of the IDE: <img src="initialise/Compile.png" width="500px" height="auto"> 
+Now go to library manager (Sketch > Include Library > Manage Libraries) and download **OttoDIYLib** by Otto DIY. Or you can click the library icon on the left of the window. 
+<img src="initialise/Library.png" width="auto" height="300px">
+
+To confirm that you have downloaded it, compile the sketch using the 'tick' icon on the top left of the IDE: <img src="initialise/Compile.png" width="500px" height="auto"> 
 
 The code should compile without any errors.
 
