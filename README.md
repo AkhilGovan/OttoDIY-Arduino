@@ -56,6 +56,22 @@ If you have assembled the otto correctly, the hardware is functional, the wires 
 ```
   Otto.function(int STEPS, int T, int D);  // Arguments are: steps, time per step (ms), direction (1 for forward)
 ```
+Lets get started on calibrating your OTTO:
+
+Step 1: Upload the calibration.ino code to your OTTO and check the serial monitor. The output should be 
+```
+14:10:47.966 -> Distance: 
+14:10:47.966 -> 34 (or another number)
+```
+If your distance is constantly 0 or 800 then your Ultrasonic Sensor needs replacing. 
+
+Step 2: Wave your hand <10cm in front of the sensor and watch the OTTO dance, if it is 'wonky' try step 3.
+
+Step 3: put the otto upside down and use keys a/z, s/x, j/n, k/m on your keyboard to 'home' the legs of the OTTO. we want the legs and feet to be straight and perpendicular. 
+
+Step 4: If one of the servos isn't working, check the connection, check if it restricted in movement physically, and if it still doesn't work then the servo needs replacing. 
+
+Once your otto is calibrated, YOU ARE FREE TO CODE AS YOU PLEASE. 
 
 Feel free to import any function you wish and integrate it into the main loop. For example,
 * If you want otto to walk backwards when it detects an object, consider changing 
