@@ -92,7 +92,7 @@ Feel free to import any function you wish and integrate it into the main loop. F
         charRead = Serial.read();
     }
     if((charRead)==('shakeit' )){
-        Otto.crusaito(2, 1000, 20,1);
+        Otto.moonwalker(2, 1000, 20,1);
   }
   ```
 * If you want the ottobot to indefinitely walk forward for a second, wait for a second, then walk backwards for a second, add this to the loop function
